@@ -83,5 +83,44 @@ section {
 
     .watch-video.cta {
         display: block;
+        margin-top: 1em;
+
+        img {
+            margin-right: 5em;
+        }
+    }
+}
+
+.hero-image {
+
+    width: 70%;
+    margin: 3em;
+}
+
+
+.features-section {
+    background: #20272E;
+    color: white;
+}
+
+ul.features-list {
+    margin: 0;
+    padding-left: .1em;
+    // come back here 
+
+    li {
+        font-size: 1.1em;
+        margin-bottom: 1em;
+        margin-left: 2em;
+
+        &::before {
+            content: ;
+            position: 20px;
+            width: 20px;
+            height: 20px;
+            background-image: url("images/bullet-svgrepo-com.svg");
+            Background-size: contain;
+            margin-right:5em;
+        }
     }
 }
