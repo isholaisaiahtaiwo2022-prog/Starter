@@ -11,30 +11,40 @@ body {
 .navbar {
     background: white;
     padding: 1em;
+}
 
-    .logo {
-        text-decoration: none;
-        font-weight: bopld;
-        color:black;
-        font-size: 1.2em;
-        span {
-            color: var(--primary-color);
-        }
-    }
+.navbar .logo {
+    text-decoration: none;
+    font-weight: bold;
+    color:black;
+    font-size: 1.2em;
+}
 
-    nav{
+.navbar .logo span {
+    color: var(--primary-color);
+}
+
+.navbar nav{
     display: none;
 }
 
-.container {
+.navbar .container {
     display: flex;
     place-content: space-between;
+    align-items: center;
 }
 
-.mobile-menu {
+.navbar .mobile-menu {
     cursor : pointer;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 a {
@@ -54,41 +64,40 @@ section {
 
 .hero {
     text-align: center;
+    display: flex;
+    align-items: center;
 }
 
-.left-col {
+.left-col .subhead {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: gray;
+    letter-spacing: .3em;
+}
 
-    .subhead {
-        text-transform: uppercase;
-        font-weight: bold;
-        color: gray;
-        letter-spacing: .3em
-    }
+.left-col h1 {
+    font-size: 2.5em;
+    line-height:  1.3em;
+    margin-top: .2em;
+}
 
-    h1 {
-        font-size: 2.5em;
-        line-height:  1.3em;
-        margin-top: .2em;
-    }
+.left-col .primary-cta {
+    background: var(--primary-color);
+    text-decoration: none;
+    padding: .6em 1.3em;
+    font-size: 1.4em;
+    border-radius: 5em;
+    font-weight: bold;
+    display: inline-block;
+}
 
-    .primary-cta {
-        background: var(--primary-color);
-        text-decoration: none;
-        padding: .6em 1.3em;
-        font-size: 1.4em;
-        border-radius: 5em;
-        font-weight: bold;
-        display: inline-block;
-    }
+.left-col .watch-video.cta {
+    display: block;
+    margin-top: 1em;
+}
 
-    .watch-video.cta {
-        display: block;
-        margin-top: 1em;
-
-        img {
-            margin-right: 5em;
-        }
-    }
+.left-col .watch-video.cta img {
+    margin-right: 5em;
 }
 
 .hero-image {
@@ -106,21 +115,77 @@ section {
 ul.features-list {
     margin: 0;
     padding-left: .1em;
-    // come back here 
+    /* come back here */
+}
 
-    li {
-        font-size: 1.1em;
-        margin-bottom: 1em;
-        margin-left: 2em;
+ul.features-list li {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+    margin-left: 2em;
+    position: relative;
+}
 
-        &::before {
-            content: ;
-            position: 20px;
-            width: 20px;
-            height: 20px;
-            background-image: url("images/bullet-svgrepo-com.svg");
-            Background-size: contain;
-            margin-right:5em;
-        }
-    }
+ul.features-list li::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("images/bullet-svgrepo-com.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 1em;
+    vertical-align: middle;
+}
+
+.features-section img {
+    display:  none;
+}
+
+.testimony.secton {
+    background: var(--primary-color);
+    color: white;
+    padding: 3em 2em;
+}
+
+.testimony.secton ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+    list-style: none;
+}
+
+.testimony.secton li {
+    background: #006BD6;
+    text-align: center;
+    padding: 2em 1.5em;
+    width: 300px;
+    border-radius: 1em;
+    position: relative;
+}
+
+.testimony.secton li img {
+    width: 80px;
+    height: 80px;
+    border: 5px solid white;
+    border-radius: 50%;
+    margin-top: -5em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    object-fit: cover;
+}
+
+.testimony.secton blockquote {
+    font-size: 0.95em;
+    margin: 1em 0;
+    font-style: italic;
+}
+
+.testimony.secton cite {
+    display: block;
+    font-weight: bold;
+    font-style: normal;
+    margin-top: 1em;
 }
